@@ -10,6 +10,7 @@ import { createStore } from 'redux';
 const initialState = {
   count: 0
 }
+const store = createStore(reducer);
 
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -25,8 +26,6 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
-
-const store = createStore(reducer);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
